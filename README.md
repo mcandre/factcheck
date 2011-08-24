@@ -1,4 +1,4 @@
-factcheck - Factor port of QuickCheck unit test framework
+factcheck - A Factor port of QuickCheck unit test framework
 
 REQUIREMENTS
 
