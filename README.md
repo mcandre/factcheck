@@ -12,7 +12,6 @@ INSTALLATION
 EXAMPLE
 
 	$ factor example.factor 
-	Loading /Users/andrew/.factor-rc
 	+++ OK, passed 100 tests.
 	*** Failed!
 	{ 979866105 }
