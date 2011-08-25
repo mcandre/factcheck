@@ -1,3 +1,6 @@
+! Andrew Pennebaker <andrew.pennebaker@gmail.com>
+! With help from Joe Groff <arcata@gmail.com>
+
 USING: kernel random math sequences strings fry prettyprint ;
 IN: factcheck
 

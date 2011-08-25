@@ -9,7 +9,7 @@ IN: example
 : gen-even ( -- n ) gen-integer dup even? [ ] [ 1 + ] if ;
 
 : main ( -- )
-    prop-even [ gen-even ] for-all? .
+    [ prop-even ] [ gen-even ] for-all? .
 
     ! ...
     ;
