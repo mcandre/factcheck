@@ -29,12 +29,15 @@ IN: factcheck
 ! Otherwise, print the offending values and return f.
 : for-all ( quot seq -- seq )
     ! rawfact generators
-    [ call dup . ] map ! rawfact arguments
+    [ call( -- obj ) ] map ! rawfact arguments
 
-    drop drop [ 1 2 3 ]
+    swap ! arguments rawfact
 
-    ! swap ! arguments rawfact
-    ! input<sequence
+    2dup swap . .
+
+    ! drop drop [ 1 2 3 ]
+
+    input<sequence
 
     ! 100 ! rawfact generators 100
     ! [ replicate ]
