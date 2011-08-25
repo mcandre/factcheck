@@ -4,15 +4,12 @@ INCLUDING: factcheck ;
 USING: kernel math prettyprint ;
 IN: example
 
-! : gen-even ( -- n )
+: prop-even ( -- quot: ( n -- ? ) ) [ even? ] ; inline
+
+: gen-even ( -- quot: ( -- n ) ) [ gen-integer call dup even? [ ] [ 1 + ] if ] ; inline
 
 : main ( -- )
-    gen-string call .
-
-    ! ...
-
-    ! even?
-    ! gen-even
+    prop-even { gen-even } for-all .
 
     ! ...
     ;
