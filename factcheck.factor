@@ -1,7 +1,7 @@
 ! Andrew Pennebaker <andrew.pennebaker@gmail.com>
 ! With help from Joe Groff <arcata@gmail.com>
 
-USING: kernel random math sequences strings fry prettyprint ;
+USING: kernel io random math sequences combinators.smart strings locals prettyprint ;
 IN: factcheck
 
 ! A quotation generating a random integer.
@@ -17,11 +17,17 @@ IN: factcheck
 : gen-char ( -- ch ) gen-integer 128 mod ;
 
 ! A quotation generating a random sequence.
-: gen-seq ( quot: ( -- obj ) -- seq ) gen-integer 100 mod swap replicate ;
+: gen-seq ( quot: ( -- obj ) -- seq ) gen-integer 100 mod swap replicate ; inline
 
 ! A quotation generating a random string.
 : gen-string ( -- str ) [ gen-char ] gen-seq >string ;
 
-! If the fact holds true for the generated values, print success and return t.
-! Otherwise, print the offending values and return f.
-: for-all? ( fact: ( ..a -- ? ) generator: ( -- ..a ) -- ? ) swap [ 100 iota ] 2dip '[ drop @ @ not ] find drop not ; inline
+! If the fact holds true for the generated values, print success.
+! Otherwise, print the offending values.
+:: for-all ( fact: ( ..a -- ? ) generator: ( -- ..a ) -- )
+    100 iota [ drop 
+        generator { } output>sequence :> generated
+        generated fact input<sequence :> ok?
+        ok? [ "*** Failed!" print generated . ] unless
+        ok? not
+    ] find drop not [ "+++ OK, passed 100 tests." print ] when ; inline

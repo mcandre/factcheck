@@ -7,4 +7,9 @@ REQUIREMENTS
 
 EXAMPLE
 
-	./example.factor
+	$ ./example.factor 
+	Loading /Users/andrew/.factor-rc
+	+++ OK, passed 100 tests.
+	*** Failed!
+	{ 979866105 }
+	+++ OK, passed 100 tests.
