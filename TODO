@@ -1,4 +1,2 @@
- - gen-sequence
- - gen-string
  - example.factor
  - factcheck package

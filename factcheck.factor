@@ -1,4 +1,4 @@
-USING: kernel random math ;
+USING: kernel random math sequences strings ;
 IN: factcheck
 
 ! A quotation generating a random integer.
@@ -12,6 +12,12 @@ IN: factcheck
 
 ! A quotation generating a random character.
 : gen-char ( -- quot: ( -- ch ) ) [ gen-integer call 128 mod ] ; inline
+
+! A quotation generating a random sequence.
+: gen-seq ( quot: ( -- obj ) -- quot: ( -- seq ) ) [ gen-integer call 100 mod swap replicate ] ; inline
+
+! A quotation generating a random string.
+: gen-string ( -- str ) [ gen-char gen-seq call >string ] ; inline
 
 ! quot is a fact to check.
 ! seq is a sequence of quotations generating random values to pass to the fact.
