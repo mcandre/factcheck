@@ -7,7 +7,7 @@ IN: example
 ! : gen-even ( -- n )
 
 : main ( -- )
-    gen-bool call .
+    gen-byte call .
 
     ! ...
 

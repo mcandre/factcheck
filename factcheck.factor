@@ -7,6 +7,9 @@ IN: factcheck
 ! A quotation generating a random boolean.
 : gen-bool ( -- quot: ( -- ? ) ) [ gen-integer call even? ] ; inline
 
+! A quotation generating a random byte.
+: gen-byte ( -- quot: ( -- n ) ) [ gen-integer call 256 mod ] ; inline
+
 ! quot is a fact to check.
 ! seq is a sequence of quotations generating random values to pass to the fact.
 !
