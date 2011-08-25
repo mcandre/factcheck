@@ -1,13 +1,13 @@
 #! /usr/bin/env factor
 
 INCLUDING: factcheck ;
-USING: math prettyprint ;
+USING: kernel math prettyprint ;
 IN: example
 
 ! : gen-even ( -- n )
 
 : main ( -- )
-    gen-integer apply .
+    gen-integer call .
 
     ! ...
 

@@ -2,7 +2,7 @@ USING: random ;
 IN: factcheck
 
 ! A quotation generating a random integer.
-: gen-integer ( -- quot | quot: -- n ) [ random-32 ] ;
+: gen-integer ( -- quot: ( -- n ) ) [ random-32 ] ; inline
 
 ! quot is a fact to check.
 ! seq is a sequence of quotations generating random values to pass to the fact.
