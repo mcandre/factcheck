@@ -1,7 +1,6 @@
 #! /usr/bin/env factor
 
-INCLUDING: factcheck ;
-USING: kernel math strings ;
+USING: factcheck kernel math strings ;
 IN: example
 
 : fact-even ( n -- ? ) even? ;

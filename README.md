@@ -2,12 +2,16 @@ factcheck - A Factor port of QuickCheck unit test framework
 
 REQUIREMENTS
 
- - Factor 0.94+
- - The `INCLUDING` [macro](https://github.com/mcandre/dotfiles/blob/master/factor-rc)
+ - Factor 0.94
+ - `$FACTOR_ROOT` is set
+
+INSTALLATION
+
+	$ cp -r factcheck $FACTOR_ROOT/extra
 
 EXAMPLE
 
-	$ ./example.factor 
+	$ factor example.factor 
 	Loading /Users/andrew/.factor-rc
 	+++ OK, passed 100 tests.
 	*** Failed!

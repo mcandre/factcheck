@@ -1,6 +1,3 @@
-! Andrew Pennebaker <andrew.pennebaker@gmail.com>
-! With help from Joe Groff <arcata@gmail.com>
-
 USING: kernel io random math sequences combinators.smart strings locals prettyprint ;
 IN: factcheck
 
