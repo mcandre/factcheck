@@ -8,7 +8,7 @@ IN: factcheck
 : gen-bool ( -- ? ) gen-integer even? ;
 
 ! A quotation generating a random byte.
-: gen-byte ( -- n ) gen-integer 256 ;
+: gen-byte ( -- n ) gen-integer 256 mod ;
 
 ! A quotation generating a random character.
 : gen-char ( -- ch ) gen-integer 128 mod ;
@@ -22,7 +22,7 @@ IN: factcheck
 ! If the fact holds true for the generated values, print success.
 ! Otherwise, print the offending values.
 :: for-all ( fact: ( ..a -- ? ) generator: ( -- ..a ) -- )
-    100 iota [ drop 
+    100 iota [ drop
         generator { } output>sequence :> generated
         generated fact input<sequence :> ok?
         ok? [ "*** Failed!" print generated . ] unless
