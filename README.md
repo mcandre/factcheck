@@ -1,5 +1,9 @@
 factcheck - A Factor port of QuickCheck unit test framework
 
+HOMEPAGE
+
+[http://www.yellosoft.us/quickcheck](http://www.yellosoft.us/quickcheck)
+
 REQUIREMENTS
 
  - Factor 0.94
