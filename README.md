@@ -1,19 +1,19 @@
-factcheck - A Factor port of QuickCheck unit test framework
+# factcheck - A Factor port of QuickCheck unit test framework
 
-HOMEPAGE
+## HOMEPAGE
 
 [http://www.yellosoft.us/quickcheck](http://www.yellosoft.us/quickcheck)
 
-REQUIREMENTS
+## REQUIREMENTS
 
- - Factor 0.94
+ - [Factor 0.94](http://factorcode.org/)
  - `$FACTOR_ROOT` is set
 
-INSTALLATION
+## INSTALLATION
 
 	$ cp -r factcheck $FACTOR_ROOT/extra
 
-EXAMPLE
+## EXAMPLE
 
 	$ factor example.factor 
 	+++ OK, passed 100 tests.
