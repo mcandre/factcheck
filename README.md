@@ -6,17 +6,21 @@
 
 ## REQUIREMENTS
 
- - [Factor 0.94](http://factorcode.org/)
- - `$FACTOR_ROOT` is set
+* [Factor 0.94](http://factorcode.org/)
+* `$FACTOR_ROOT` is properly configured
 
 ## INSTALLATION
 
-	$ cp -r factcheck $FACTOR_ROOT/extra
+```
+$ make install
+```
 
 ## EXAMPLE
 
-	$ factor example.factor 
-	+++ OK, passed 100 tests.
-	*** Failed!
-	{ 979866105 }
-	+++ OK, passed 100 tests.
+```
+$ factor example.factor
++++ OK, passed 100 tests.
+*** Failed!
+{ 979866105 }
++++ OK, passed 100 tests.
+```

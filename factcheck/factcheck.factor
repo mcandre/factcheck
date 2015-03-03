@@ -22,9 +22,9 @@ IN: factcheck
 ! If the fact holds true for the generated values, print success.
 ! Otherwise, print the offending values.
 :: for-all ( fact: ( ..a -- ? ) generator: ( -- ..a ) -- )
-    100 iota [ drop
-        generator { } output>sequence :> generated
-        generated fact input<sequence :> ok?
-        ok? [ "*** Failed!" print generated . ] unless
-        ok? not
-    ] find drop not [ "+++ OK, passed 100 tests." print ] when ; inline
+  100 iota [ drop
+    generator { } output>sequence :> generated
+    generated fact input<sequence :> ok?
+    ok? [ "*** Failed!" print generated . ] unless
+    ok? not
+  ] find drop not [ "+++ OK, passed 100 tests." print ] when ; inline
