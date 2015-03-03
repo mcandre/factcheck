@@ -1,4 +1,4 @@
-# factcheck - A Factor port of QuickCheck unit test framework
+# factcheck - a Factor port of QuickCheck unit test framework
 
 ## HOMEPAGE
 

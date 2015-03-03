@@ -1,6 +1,6 @@
 {
   "name": "factcheck",
-  "description": "Configuration files",
+  "description": "a Factor port of QuickCheck unit test framework",
   "version": "0.0.0",
   "repository": {
     "type": "git",
