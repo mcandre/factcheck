@@ -12,12 +12,12 @@ IN: example
 : fact-number-bool-then-string ( n ? str -- ? ) string? swap boolean? and swap number? and ;
 
 : main ( -- )
-  [ fact-even ] [ gen-even ] for-all
+    [ fact-even ] [ gen-even ] for-all
 
-  [ fact-even ] [ gen-integer ] for-all
+    [ fact-even ] [ gen-integer ] for-all
 
-  [ fact-number-bool-then-string ] [ gen-integer gen-bool gen-string ] for-all
+    [ fact-number-bool-then-string ] [ gen-integer gen-bool gen-string ] for-all
 
-  ;
+    ;
 
 MAIN: main
